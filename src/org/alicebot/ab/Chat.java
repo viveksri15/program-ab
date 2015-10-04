@@ -130,13 +130,13 @@ public class Chat {
             String request="SET PREDICATES";
             String response = multisentenceRespond(request);
             while (!request.equals("quit")) {
-                System.out.print("Human: ");
+                System.out.print("You: ");
 				request = IOUtils.readInputTextLine();
                 response = multisentenceRespond(request);
-                System.out.println("Robot: "+response);
-                bw.write("Human: "+request);
+                System.out.println("HelpChat: "+response);
+                bw.write("You: "+request);
                 bw.newLine();
-                bw.write("Robot: "+response);
+                bw.write("HelpChat: "+response);
                 bw.newLine();
                 bw.flush();
             }
@@ -224,7 +224,7 @@ public class Chat {
                 AIMLProcessor.trace_count = 0;
                 String reply = respond(sentences[i], contextThatHistory);
                 response += "  "+reply;
-                //System.out.println("Robot: "+reply);
+                //System.out.println("HelpChat: "+reply);
             }
             requestHistory.add(request);
             responseHistory.add(response);

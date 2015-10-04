@@ -256,7 +256,7 @@ public class AB {
                 //System.out.println("Classifying "+strLine);
 
                 if (strLine != null) {
-                    if (strLine.startsWith("Human: ")) strLine = strLine.substring("Human: ".length(), strLine.length());
+                    if (strLine.startsWith("You: ")) strLine = strLine.substring("You: ".length(), strLine.length());
                     String sentences[] = bot.preProcessor.sentenceSplit(strLine);
                     for (int i = 0; i < sentences.length; i++) {
                         String sentence = sentences[i];
